@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Lato;
+}
+
+h1 {
+    font-size: 1.2em;
+    /*color: #2F4F4F;*/
+    color:white;
+}
+
+h2 {
+    font-size: 1.8em;
+    /*color: #2F4F4F;*/
+    /*color: #A5A49E;*/
+    color:white;
+    text-decoration: none;
+}
+
+h3{
+    color: #B0BEC5;
+}
+
+.CenterText {
+    text-align: center;
+}
+
+.ListItem {
+    font-size: 1.2em;
+}
+
+.BerkeleySeal {
+    width: auto;
+    height: 70px;
+}
+.Contact{
+    text-align: center;
+}
+
+
+
+.TextBlock {
+    text-align: center;
+    margin: auto;
+    width: 70%;
+}
+
+.Link{
+    text-decoration: none;
+
+}
