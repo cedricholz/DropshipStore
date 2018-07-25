@@ -6,6 +6,10 @@ import HomePage from "./HomePage"
 import {BrowserRouter} from 'react-router-dom'
 import {Route} from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
+import CategoryPage from "./components/CategoryPage/CategoryPage";
+
+import {Provider} from 'react-redux';
+import store from "./store";
 
 const Home = () => (
     <div>
@@ -15,31 +19,30 @@ const Home = () => (
     </div>
 );
 
-const Project = (projectName) => {
-    switch (projectName) {
-        case 'Crypto':
-            // return <CryptoTrader/>;
-            return "";
-        default:
-            return ""
-    }
+const getRoutes = (categories) => {
+    return categories.map((item, i) =>
+        <ScrollToTop key={i}>
+            <Route path={`/${item}`} component={() => <CategoryPage type={item}/>}/>
+        </ScrollToTop>)
 };
-
 
 class App extends Component {
     render() {
+
+        const categories = ['lightsabers', 'watches', 'tvaccessories', 'lights', 'gps', 'retrogamingsystems', '3dprinters'];
+        const routes = getRoutes(categories);
         return (
-            <BrowserRouter>
-                <div className="App">
-                    <Route exact={true} path="/" component={Home}/>
-                    <ScrollToTop>
-                        <Route path="/cryptotrader" component={() => Project('Crypto')}/>
-                    </ScrollToTop>
+            <Provider store={store}>
+                <BrowserRouter>
 
-
-                </div>
-            </BrowserRouter>
+                    <div className="App">
+                        <Route exact={true} path="/" component={Home}/>
+                        {routes}
+                    </div>
+                </BrowserRouter>
+            </Provider>
         );
+
     }
 }
 

@@ -1,35 +1,24 @@
 
-.Name {
-    color: white;
+.CompanyName {
+    color: black;
     font-size: 24px;
 }
 
-.Resume{
-    color: white;
-    font-size: 3vh;
+.MenuItem{
+    color: black;
+    display: inline-block;
 }
-
-.Pad{
-    padding-left: 1.2vh;
-    padding-right: 1.2vh;
-}
-
-
 
 .NavigationBar {
     display: flex;
     flex-direction: row;
     align-items: center;
-    /*justify-content: space-between;*/
-    /*padding-left: 15%;*/
-    /*padding-right: 15%;*/
-    padding-left: 3vh;
-
-    padding-top: 10px;
-    padding-bottom: 10px;
+    justify-content: space-between;
+    padding: 10px 20% 10px 20%;
     height: auto;
-    background: rgba(0, 0, 0, 0.24);
-
+    background: white;
+    opacity: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 
@@ -38,13 +27,5 @@
         padding-left: 6px;
     }
 }
-
-.NavigationButtons {
-    color: #183D6E;
-    font-size: 15px;
-    cursor:pointer;
-}
-
-
 
 

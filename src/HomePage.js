@@ -4,6 +4,12 @@ import './App.css';
 import Navigation from "./components/Navigation/Navigation"
 import scrollToComponent from 'react-scroll-to-component';
 import BurgerMenu from 'react-burger-menu';
+import AdBar from "./components/AdBar/AdBar";
+import Banner from "./components/Banner/Banner";
+import Categories from "./components/Categories/Categories";
+import Trending from "./components/Trending/Trending";
+import SectionHeader from "./components/SectionHeader/SectionHeader";
+import Footer from "./components/Footer/Footer";
 
 class MenuWrap extends Component {
 
@@ -47,36 +53,19 @@ export default class HomePage extends Component {
         console.log(myName)
     }
 
-    getMenu() {
+    getMenu(menuItems) {
         const Menu = BurgerMenu['pushRotate'];
-        const items = [
-            <h2 key="0"><i className="fa fa-fw fa-inbox fa-2x"/><span>Navigation</span></h2>,
-
-            <div key="1" className="MenuContainer" onClick={() => this.scrollToComponents("EXPERIENCE")}>
-                <span className="MenuItem">EXPERIENCE</span>
-            </div>,
-            <div key="2" className="MenuContainer" onClick={() => this.scrollToComponents("PROJECTS")}>
-                <span className="MenuItem">PROJECTS</span>
-            </div>,
-            <div key="3" className="MenuContainer" onClick={() => this.scrollToComponents("EDUCATION")}>
-                <span className="MenuItem">EDUCATION</span>
-            </div>,
-            <div key="4" className="MenuContainer" onClick={() => this.scrollToComponents("COURSES")}>
-                <span className="MenuItem">COURSES</span>
-            </div>,
-            <div key="5" className="MenuContainer" onClick={() => this.scrollToComponents("SKILLS")}>
-                <span className="MenuItem">SKILLS</span>
-            </div>,
-            <div key="6" className="MenuContainer" onClick={() => this.scrollToComponents("CONTACT")}>
-                <span className="MenuItem">CONTACT</span>
-            </div>,
-
-        ];
+        var items =  menuItems.map((item, i) =>
+            <div key={i} className="MenuContainer" onClick={() => this.scrollToComponents("EXPERIENCE")}>
+                <span className="MenuItem">{item}</span>
+            </div>
+        );
 
         return (
             <MenuWrap wait={20} side={'right'}>
                 <Menu isOpen={this.state.open} id={'pushRotate'} pageWrapId={'page-wrap'}
                       outerContainerId={'outer-container'} right>
+                    <h2 key="0"><i className="fa fa-fw fa-inbox fa-2x"/><span>Navigation</span></h2>
                     {items}
                 </Menu>
             </MenuWrap>
@@ -86,17 +75,26 @@ export default class HomePage extends Component {
 
     render() {
 
-        return (
+        const menuItems = ["Shop", "Faqs", "Products", "Sale", "Track Package"];
 
+        const deviceWidth = window.innerWidth;
+
+        return (
             <div className="App">
 
+                <AdBar/>
                 <div id="outer-container">
-                    {this.getMenu()}
+                    {deviceWidth < 600? this.getMenu(menuItems) : ''}
                     <main id="page-wrap">
                         <header className="header">
-                            <Navigation/>
+                            <Navigation menuItems={menuItems} scrollToComponents={this.scrollToComponents}/>
+                            <Banner/>
                         </header>
                     </main>
+                    <Categories/>
+                    <SectionHeader title={"Trending"}/>
+                    <Trending/>
+                    <Footer/>
                 </div>
 
             </div>

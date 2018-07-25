@@ -1,0 +1,15 @@
+
+.Banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    text-align: center;
+    color: white;
+    font-size: 80px;
+}
+
+.bottomText{
+    display: flex;
+    flex-direction: column;
+}

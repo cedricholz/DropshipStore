@@ -1,0 +1,35 @@
+.Footer {
+    margin-top: 100px;
+    background: black;
+
+    color: white;
+}
+
+.FooterContent{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    margin: auto;
+    padding-top: 50px;
+    width: 80%;
+}
+.ListItem{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.Quarter {
+    padding: 10px;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.QuarterHeader{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.FooterFooter{
+    text-align: center;
+    font-size: 14px;
+    padding: 50px 0 50px 0;
+}

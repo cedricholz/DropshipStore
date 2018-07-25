@@ -1,0 +1,40 @@
+.SectionHeader{
+    text-align: center;
+    padding-top: 7vh;
+    padding-bottom: 7vh;
+}
+
+.head {
+
+    font-size: 7vh;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 10px solid #00af9b;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    align-content: center;
+    color: black;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .header-section span {
+        width: 0;
+    }
+}
+
+.head h2 {
+    font-weight: bold;
+    margin-top: 1em;
+    margin: 0;
+
+
+    text-align: center;
+    /*font-size: 2em;*/
+    font-size: 6vh;
+}
+
+.SpanTitle {
+    padding-left: 10px;
+}

@@ -1,0 +1,23 @@
+.Trending {
+    width: 80%;
+    margin: auto;
+}
+
+.LeftSlider{
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.RightSlider{
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.CarouselItems{
+    display: flex;
+    align-items: center;
+}
+
+.TrendingItem {
+    text-align: center;
+}

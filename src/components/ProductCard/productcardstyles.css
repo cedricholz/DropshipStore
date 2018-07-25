@@ -1,0 +1,46 @@
+.ProductCard{
+
+}
+
+.CardImage{
+    height: 269px;
+    width: 269px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+    margin: auto;
+    margin-top: 40px;
+
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.ProductDescriptionContainer{
+    width: 269px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.ProductDescription{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.ProductPrice{
+    text-align: center;
+    font-weight: normal;
+}
+
+
+.ProductCard:hover{
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
